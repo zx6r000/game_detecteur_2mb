@@ -6,8 +6,21 @@ radio.onReceivedString(function (receivedString) {
     x = 1
     if (_type == "recepteur") {
         if (receivedString == "ping") {
+            radio.sendString("trouve")
             basic.showIcon(IconNames.Happy)
             music.play(music.stringPlayable("D F G A A B C5 C5 ", 344), music.PlaybackMode.UntilDone)
+        }
+    }
+    if (_type == "recepteur") {
+        if (receivedString == "trouve") {
+            basic.showIcon(IconNames.Sad)
+            music.ringTone(349)
+            basic.pause(1000)
+            music.ringTone(440)
+            basic.pause(1000)
+            music.ringTone(523)
+            basic.pause(1000)
+            music.ringTone(698)
         }
     }
 })
