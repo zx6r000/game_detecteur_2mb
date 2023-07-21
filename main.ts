@@ -11,7 +11,7 @@ radio.onReceivedString(function (receivedString) {
             music.play(music.stringPlayable("D F G A A B C5 C5 ", 344), music.PlaybackMode.UntilDone)
         }
     }
-    if (_type == "recepteur") {
+    if (_type == "emetteur") {
         if (receivedString == "trouve") {
             basic.showIcon(IconNames.Sad)
             music.ringTone(349)
