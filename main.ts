@@ -14,13 +14,13 @@ radio.onReceivedString(function (receivedString) {
     if (_type == "emetteur") {
         if (receivedString == "trouve") {
             basic.showIcon(IconNames.Sad)
-            music.ringTone(349)
-            basic.pause(1000)
-            music.ringTone(440)
-            basic.pause(1000)
-            music.ringTone(523)
-            basic.pause(1000)
-            music.ringTone(698)
+            music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
+            basic.pause(2000)
+            music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
+            basic.pause(2000)
+            music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
+            basic.pause(2000)
+            music.play(music.builtinPlayableSoundEffect(soundExpression.sad), music.PlaybackMode.UntilDone)
         }
     }
 })
